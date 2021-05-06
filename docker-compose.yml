@@ -12,7 +12,7 @@ services:
       MYSQL_USER: dungnm
       MYSQL_PASSWORD: dungnm
     ports:
-      - 3306:3306
+      - 3307:3306
     volumes:
       - ./mysql-data:/var/lib/mysql
       - ./docker/mysql/my-custom.cnf:/etc/mysql/conf.d/my-custom.cnf
@@ -32,7 +32,7 @@ services:
     build: ./docker/httpd
     restart: always
     ports:
-      - 80:80
+      - 81:80
     volumes:
       - ./:/app
       - ./docker/httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
